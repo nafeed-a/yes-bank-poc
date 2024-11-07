@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage continueOnError="false" enabled="true" name="AM-ErrorResponse">
+    <DisplayName>AM-ErrorResponse</DisplayName>
+    <Properties/>
+    <Set>
+        <Headers/>
+        <Payload contentType="application/json" variablePrefix="@" variableSuffix="#">
+            {
+                "httpCode": "@errorCode#",
+                "httpMessage": "@errorDesc#",
+                "message": "@errorMessage#"
+            }
+            </Payload>
+        <StatusCode>{httpError}</StatusCode>
+        <ReasonPhrase>{errorDesc}</ReasonPhrase>
+        <Path/>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>
