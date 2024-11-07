@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations continueOnError="false" enabled="true" name="KVM-IBMHeader" mapIdentifier="ibm-credentials1">
+    <DisplayName>KVM-IBMHeader</DisplayName>
+    <Properties/>
+    <ExclusiveCache>false</ExclusiveCache>
+    <ExpiryTimeInSecs>300</ExpiryTimeInSecs>
+    <!--<InitialEntries>-->
+    <!--    <Entry>-->
+    <!--        <Key>-->
+    <!--            <Parameter>X-IBM-Client-ID</Parameter>-->
+    <!--        </Key>-->
+    <!--        <Value>766e0f36b45266a3602a075550981b1e</Value>-->
+    <!--    </Entry>-->
+    <!--    <Entry>-->
+    <!--        <Key>-->
+    <!--            <Parameter>X-IBM-Client-Secret</Parameter>-->
+    <!--        </Key>-->
+    <!--        <Value>2237e4c26696255099909b0ea07f7524</Value>-->
+    <!--    </Entry>-->
+    <!--</InitialEntries>-->
+    <Get assignTo="request.header.X-IBM-Client-ID">
+        <Key>
+            <Parameter>X-IBM-Client-ID</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="request.header.X-IBM-Client-Secret">
+        <Key>
+            <Parameter>X-IBM-Client-Secret</Parameter>
+        </Key>
+    </Get>
+    <Scope>environment</Scope>
+</KeyValueMapOperations>

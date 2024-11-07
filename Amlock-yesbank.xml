@@ -1,0 +1,23 @@
+<APIProxy revision="7" name="Amlock-yesbank">
+    <DisplayName></DisplayName>
+    <Description></Description>
+    <CreatedAt>1730887496761</CreatedAt>
+    <LastModifiedAt>1730887496761</LastModifiedAt>
+    <BasePaths>/v1/amlock</BasePaths>
+    <Policies>
+        <Policy>JS-SetApigeeError</Policy>
+        <Policy>AM-ErrorResponse</Policy>
+        <Policy>KVM-IBMHeader</Policy>
+        <Policy>OA-ValidateAccessToken</Policy>
+        <Policy>FC-TestQuota</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://JS-SetApigeeError.js</Resource>
+    </Resources>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>
